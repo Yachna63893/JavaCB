@@ -26,7 +26,7 @@ public class Graph {
     public int noofEdge(){
         int sum = 0;
         for(int key: map.keySet()){
-            map.get(key).size();
+            sum += map.get(key).size();
         }
         return sum/2;
     }
@@ -74,3 +74,4 @@ public class Graph {
         visited.remove(src);
     }
 }
+
