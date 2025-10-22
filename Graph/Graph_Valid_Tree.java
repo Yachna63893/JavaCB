@@ -32,7 +32,7 @@ public class Graph_Valid_Tree {
                 int r = q.poll();
                 //2.ignore(if already visited)
                 if(visited.contains(r)){
-                    continue;
+                    return false;
                 }
                 //3.mark visited
                 visited.add(r);
@@ -49,3 +49,4 @@ public class Graph_Valid_Tree {
     }
     }
 }
+
