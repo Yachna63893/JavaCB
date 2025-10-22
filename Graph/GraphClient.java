@@ -32,5 +32,8 @@ public class GraphClient {
         g1.AddEdge(6, 7, 3);
         System.out.println(g1.BFS(1,6));
         System.out.println(g1.DFS(1,6));
+        g1.BFT();
+        g1.DFT();
     }
 }
+
