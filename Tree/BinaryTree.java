@@ -88,5 +88,57 @@ public class BinaryTree{
         int rh = ht(node.right);
         return Math.max(lh, rh)+1;
     }
+    public void PreOrder(){
+        PreOrder(this.root);
+        System.out.println();
+    }
+    private void PreOrder(Node node){
+        if(node==null){
+            return;
+        }
+        System.out.print(node.val+" ");
+        PreOrder(node.left);
+        PreOrder(node.right);
+    }
+    public void InOrder(){
+        InOrder(this.root);
+        System.out.println();
+    }
+    private void InOrder(Node node){
+        if(node == null){
+            return;
+        }
+        InOrder(node.left);
+        System.out.print(node.val+" ");
+        InOrder(node.right);
+    }
+    public void PostOrder(){
+        PostOrder(this.root);
+        System.out.println();
+    }
+    private void PostOrder(Node node){
+        if(node == null){
+            return;
+        }
+        PostOrder(node.left);
+        PostOrder(node.right);
+        System.out.print(node.val+" "); 
+    }
+    public void levelOrder(){
+        //LinkedList<Node> q = new LinkedList<>();
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            Node rv = q.remove(); //remove first
+            System.out.print(rv.val+" ");
+            if(rv.left != null){
+                q.add(rv.left);
+            }
+            if(rv.right != null){
+                q.add(rv.right);
+            }
+        }
+        System.out.println();
+    }
 }
 
